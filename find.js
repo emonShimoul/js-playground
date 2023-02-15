@@ -1,7 +1,7 @@
-// ARRAY FIND METHOD 
+// ARRAY FIND METHOD (array.prototype.find()) 
 var num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const result = num.find(function (currentValue, currentIndex, arr) {
-    // console.log(currentIndex);
+    // return the 1st element which is greater than 5. When it will find the first true, it will immediately break the loop and get out from the function.  
     return currentValue > 5;
 });
 console.log(result);

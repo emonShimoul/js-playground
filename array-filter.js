@@ -7,6 +7,7 @@ const result = nums.filter(function (currentValue, currentIndex, arr) {
     // It also returns the current index and also the array in the 2nd and 3rd parameter respectively.
     return currentValue > 5;
 });
+
 // NOTE: THIS filter() METHOD WILL NOT CHANGE THE MAIN ARRAY
 console.log(result);
 console.log(nums);

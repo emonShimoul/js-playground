@@ -2,10 +2,11 @@
 
 var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const result = nums.find(function (currentValue, currentIndex, arr) {
-    // return the 1st element which is greater than 5. When it will find the first true, it will immediately break the loop and get out from the function. 
+    // The find() method return the 1st element which is greater than 5. When it will find the first true, it will immediately break the loop and get out from the function. 
     // It also returns the current index and also the array in the 2nd and 3rd parameter respectively. 
     return currentValue > 5;
 });
+
 // NOTE: THIS find() METHOD WILL NOT CHANGE THE MAIN ARRAY
 console.log(result);
 

@@ -1,3 +1,6 @@
+// promise
+// is used to write the asynchronous code in a synchoronous way
+
 const hasMeeting = false;
 
 const meeting = new Promise((resolve, reject) => {

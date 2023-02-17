@@ -1,3 +1,7 @@
+// async-await
+// is used to write the asynchronous code in a synchronous way like promise 
+// but more flexible way than promise
+
 const hasMeeting = true;
 
 const meeting = new Promise((resolve, reject) => {

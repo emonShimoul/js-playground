@@ -58,13 +58,3 @@ async function course() {
 }
 
 course();
-
-// enroll()
-//     .then(progress)
-//     .then(getCertificate)
-//     .then(function (value) {
-//         console.log(value);
-//     })
-//     .catch(function (err) {
-//         console.log(err);
-//     })

@@ -15,16 +15,21 @@ function enroll(callback) {
 
 function progress(callback) {
     console.log('Course on progress...');
-
-    if (marks >= 80) {
-        callback();
-    } else {
-        console.log("You could not get enough marks to get the certificate!!");
-    }
+    setTimeout(function () {
+        if (marks >= 80) {
+            callback();
+        } else {
+            console.log("You could not get enough marks to get the certificate!!");
+        }
+    }, 3000);
 }
 
 function getCertificate() {
-    console.log("Here is your certificate!!!");
+    console.log("Preparing your certificate...");
+
+    setTimeout(function () {
+        console.log("Congrats! you got your certificate!!!");
+    }, 1000);
 }
 
 enroll(function () {

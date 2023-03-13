@@ -1,5 +1,4 @@
 const milestoneData = JSON.parse(data).data;
-// console.log(milestoneData);
 
 // load course milestone data
 function loadMilestones() {
@@ -51,7 +50,6 @@ function openMilestone(milestoneElement, id) {
 
   // toggle current element
   currentPanel.classList.toggle("show");
-
   showMilestone(id);
 }
 
@@ -76,7 +74,7 @@ function markMileStone(checkbox, id) {
   const doneList = document.querySelector(".doneList");
   const milestonesList = document.querySelector(".milestones");
   const item = document.getElementById(id);
-  console.log(id);
+  // console.log(id);
   if (checkbox.checked) {
     // mark as done 
     milestonesList.removeChild(item);
@@ -84,13 +82,23 @@ function markMileStone(checkbox, id) {
   } else {
     doneList.removeChild(item);
     milestonesList.appendChild(item);
-    reload();
+    reload(milestonesList);
   }
 }
 
-function reload() {
-  console.log("reload");
-}
+function reload(milestonesList) {
+  const milestones = (milestonesList.childNodes);
+  const milestonesArr = Array.from(milestones);
 
+  const sorting = milestonesArr.sort(function (a, b) {
+    let aId = parseInt(a.id);
+    let bId = parseInt(b.id);
+    return aId - bId;
+  });
+
+  sorting.forEach(element => {
+    milestonesList.appendChild(element)
+  });
+}
 
 loadMilestones();

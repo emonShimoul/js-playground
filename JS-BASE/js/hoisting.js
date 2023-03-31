@@ -1,7 +1,7 @@
 print5();
 print10();
 
-// var keyword will be hoisted. let and const doesn't
+// var keyword will be hoisted.
 for (var i = 0; i < 5; i++) {
   console.log(i);
 }
@@ -17,3 +17,9 @@ function print7() {
 const print10 = function () {
   console.log("inside function print5 ", 7);
 };
+
+// Hoisting is a JavaScript's default behavior of moving all declarations to the top of the current scope.
+
+// All variable declarations (var, let, and const) are hoisted in JS, while the var declarations are initialized with undefined, but let and const declarations remain uninitialized.
+
+// Only function declarations are hoisted in JS, function expressions are not hoisted. JS only hoist declarations, not initialization (assignments).

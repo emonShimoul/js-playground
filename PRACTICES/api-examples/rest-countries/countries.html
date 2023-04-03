@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Countries</title>
+
+    <style>
+      .countries {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+      }
+      .country {
+        border: 3px solid goldenrod;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: lightgoldenrodyellow;
+      }
+      .country img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 title="This is title. You can see it on tooltip.">Rest Countries</h2>
+    <section id="country-detail"></section>
+    <section>
+      <div id="countries" class="countries"></div>
+    </section>
+    <script src="countries.js"></script>
+  </body>
+</html>

@@ -184,6 +184,16 @@
   overflow: hidden;
   position: relative;
 }
+.home-banner:after {
+  content: "";
+  position: absolute;
+  right: -20vh;
+  top: -20vh;
+  width: 100vh;
+  height: 100vh;
+  border-radius: 50%;
+  background: #0b0b13;
+}
 .home-banner .container {
   position: relative;
   z-index: 1;
@@ -245,6 +255,8 @@
   letter-spacing: 2px;
   text-decoration: none;
 }
+
+/* media query */
 @media (min-width: 1400px) {
   .home-banner .hb-img img {
     max-width: 80%;
@@ -254,7 +266,20 @@
   .container-edited {
     width: 950px;
   }
-  .home-banner .hb-img img {
-    max-width: 100%;
+}
+.home-banner .hb-img img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .home-banner .type-box h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+  .home-banner .type-box .desc {
+    font-size: 16px;
+  }
+  .home-banner .type-box h6 {
+    font-size: 18px;
+    margin: 0 0 10px;
   }
 }

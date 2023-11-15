@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+        li{
+            color: tomato;
+        }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi odio facere veniam nihil quasi ipsum voluptatibus similique unde autem impedit nam, vero fugit? Repellat quis sequi laudantium asperiores est natus?</p>
+    </header>
+    <main>
+        <section>
+            <h1>DOM is Awesome</h1>
+        <ul>
+            <li>Jalali set</li>
+            <li>Bonobash</li>
+            <li>Shafayet</li>
+            <li>Shafayet 2</li>
+        </ul>
+        </section>
+
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li class="important-places">Sundarban</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Shalbon</li>
+                <li class="best-place">Rangamati</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/dom.js"></script>
+
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        for(const li of liCollection){
+            console.log(li.innerText);
+        } 
+
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'Fruits change by JS';
+
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            console.log(place.innerText);
+        }
+    </script>
+</body>
+</html>

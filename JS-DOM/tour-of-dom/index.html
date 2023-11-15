@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 
     <style>
-        li{
+        .fruits-container li{
             color: tomato;
         }
         #fruits-title{
@@ -34,7 +34,7 @@
         </ul>
         </section>
 
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits-title">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
@@ -68,6 +68,12 @@
         const places = document.getElementsByClassName('important-places');
         for(const place of places){
             console.log(place.innerText);
+        }
+
+
+        const someli = document.querySelectorAll('.fruits-container li');
+        for(const li of someli){
+            console.log(li.innerText);
         }
     </script>
 </body>

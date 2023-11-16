@@ -35,7 +35,7 @@
         </section>
 
         <section class="fruits-container">
-            <h1 id="fruits-title">Fruits I like</h1>
+            <h1 id="fruits-title" class="some-class random-class blue-bg">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
                 <li>Banana</li>
@@ -43,7 +43,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-title">Places I like to visit</h1>
             <ul>
                 <li class="important-places">Sundarban</li>
@@ -55,11 +55,12 @@
     </main>
 
     <script src="js/dom.js"></script>
+    <script src="js/styleInJs.js"></script>
 
     <script>
         const liCollection = document.getElementsByTagName('li');
         for(const li of liCollection){
-            console.log(li.innerText);
+            // console.log(li.innerText);
         } 
 
         const fruitsTitle = document.getElementById('fruits-title');
@@ -67,13 +68,13 @@
 
         const places = document.getElementsByClassName('important-places');
         for(const place of places){
-            console.log(place.innerText);
+            // console.log(place.innerText);
         }
 
 
         const someli = document.querySelectorAll('.fruits-container li');
         for(const li of someli){
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
     </script>
 </body>

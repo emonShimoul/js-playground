@@ -28,7 +28,7 @@ document.getElementById('calculator').addEventListener('click', function(event){
     const typedNumbersField = document.getElementById('typed-numbers');
     const previousTypedNumber = typedNumbersField.value;
     if(isNaN(number)){
-        console.log(number);
+        // console.log(number);
         if(number === 'C'){
             typedNumbersField.value = '';
         }
@@ -41,5 +41,23 @@ document.getElementById('calculator').addEventListener('click', function(event){
     } else{
         const newTypedNumber = previousTypedNumber + number;
         typedNumbersField.value = newTypedNumber;
+    }
+})
+
+document.getElementById('verify-pin').addEventListener('click', function(){
+    const displayPinField = document.getElementById('display-pin');
+    const currentPin = displayPinField.value;
+
+    const typedNumberField = document.getElementById('typed-numbers');
+    const typedNumber = typedNumberField.value;
+
+    const pinSuccessMessage = document.getElementById('pin-success');
+    const pinFailureMessage = document.getElementById('pin-failure');
+    if(typedNumber === currentPin){
+        pinSuccessMessage.style.display = 'block';
+        pinFailureMessage.style.display = 'none';
+    } else{
+        pinFailureMessage.style.display = 'block';
+        pinSuccessMessage.style.display = 'none';
     }
 })

@@ -17,8 +17,29 @@ function generatePin(){
 
 document.getElementById('generate-pin').addEventListener('click', function(){
     const pin = getPin();
-    
+
     // display pin
     const displayPinField = document.getElementById('display-pin');
     displayPinField.value = pin;
+})
+
+document.getElementById('calculator').addEventListener('click', function(event){
+    const number = event.target.innerText;
+    const typedNumbersField = document.getElementById('typed-numbers');
+    const previousTypedNumber = typedNumbersField.value;
+    if(isNaN(number)){
+        console.log(number);
+        if(number === 'C'){
+            typedNumbersField.value = '';
+        }
+        else if(number === '<'){
+            const digits = previousTypedNumber.split('');
+            digits.pop();
+            const remainingDigits = digits.join('');
+            typedNumbersField.value = remainingDigits;
+        }
+    } else{
+        const newTypedNumber = previousTypedNumber + number;
+        typedNumbersField.value = newTypedNumber;
+    }
 })

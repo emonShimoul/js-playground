@@ -7,8 +7,9 @@ const fish = {
     price: 4000
 }
 
-const {phone, color, price} = fish;
+const {phone, color, price, ...others} = fish;
 console.log(phone, color, price); 
+console.log(others); 
 
 
 // array destructuring

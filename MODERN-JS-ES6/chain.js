@@ -1,6 +1,6 @@
 const data = [{id: 1, name: 'Emon', address: 'Khulna'}];
 
-// console.log(data[0].address);
+console.log(data[0].address);
 
 const products = {
     count: 5000,
@@ -10,7 +10,7 @@ const products = {
     ]
 }
 
-// console.log(products.data[1].price);
+console.log(products.data[1].price);
 
 
 const user = {

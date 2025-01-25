@@ -22,4 +22,6 @@ y = 7; // initialize
  *
  * But using a const variable before it is declared, is a syntax error, so the code will simply not run. For const value of the variable must be assigned when it is declared otherwise it will throw a sytaxerror.
  *
+ * JavaScript in strict mode does not allow variables to be used if they are not declared.
+ *
  */

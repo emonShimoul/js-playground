@@ -55,7 +55,6 @@ const getData = async() => {
         }));
         console.log(result1);
         
-        
         // 3. Handle Error
     } catch(error){
         console.log(error);
